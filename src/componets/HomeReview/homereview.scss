@@ -1,0 +1,217 @@
+@import "../../index.scss";
+
+.review {
+  position: relative;
+  z-index: 4;
+  overflow: hidden;
+  .box-shadow-4 {
+    width: 1299px;
+    height: 1299px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(192, 130, 183, 0.1) 0%,
+      rgba(192, 130, 183, 0) 100%
+    );
+    position: absolute;
+    z-index: -3;
+    top: -400px;
+    right: -300px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  .box-shadow-5 {
+    width: 1299px;
+    height: 1299px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(192, 130, 183, 0.1) 0%,
+      rgba(192, 130, 183, 0) 100%
+    );
+    position: absolute;
+    z-index: -3;
+    bottom: -600px;
+    left: -200px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .round-box {
+    position: absolute;
+    bottom: -400px;
+    right: 0;
+    z-index: -2;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+  }
+  .title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: end;
+    margin-bottom: 70px;
+    .content {
+      p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0%;
+        color: $text-color;
+      }
+    }
+  }
+  .reviws {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 150px;
+    .review-box {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      &:nth-child(even) {
+        padding-left: 70px;
+      }
+      &:nth-child(odd) {
+        border-right: 1.5px solid;
+        border-image-slice: 1;
+        padding-right: 70px;
+        border-image-source: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+      .oner-sharing {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 10px;
+        .oner {
+          display: flex;
+          align-items: start;
+          gap: 20px;
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+          }
+          .oner-title {
+            p {
+              font-weight: 400;
+              font-size: 20px;
+              font-style: normal;
+              line-height: 30px;
+              letter-spacing: 0%;
+              color: $white-color;
+            }
+            span {
+              display: block;
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 30px;
+              letter-spacing: 0%;
+              color: $text-color;
+            }
+          }
+        }
+      }
+      p {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0%;
+        color: $text-color;
+      }
+      .star {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .review {
+    .title {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .reviws {
+      row-gap: 100px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .review {
+    .box-shadow-4 {
+      top: -100px;
+    }
+  }
+}
+@media (max-width: 911px) {
+  .review {
+    .reviws {
+      row-gap: 70px;
+      .review-box {
+        &:nth-child(even) {
+          padding-left: 40px;
+        }
+        &:nth-child(odd) {
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .review {
+    .title {
+      margin-bottom: 50px;
+    }
+    .reviws {
+      row-gap: 40px;
+      grid-template-columns: 1fr;
+      .review-box {
+        gap: 20px;
+        .oner-sharing {
+          .oner {
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+        &:nth-child(even) {
+          padding-left: 0;
+        }
+        &:nth-child(odd) {
+          border-image-slice: 0;
+          border: none;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .review {
+    .round-box {
+      bottom: -255px;
+    }
+  }
+}

@@ -1,0 +1,279 @@
+@import "../../index.scss";
+
+.future {
+  position: relative;
+  z-index: 3;
+  .box-shadow-4 {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(192, 130, 183, 0.1) 0%,
+      rgba(192, 130, 183, 0) 100%
+    );
+    width: 1299px;
+    height: 1299px;
+    position: absolute;
+    bottom: -413px;
+    right: -350px;
+    z-index: -2;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  .title {
+    padding-bottom: 70px;
+    max-width: 1000px;
+    margin: 0 auto;
+    h2 {
+      text-align: center;
+    }
+  }
+  .future-wrapper {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    z-index: 5;
+    align-items: stretch;
+    .tab-btn {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 4px 20px;
+      border-radius: 100px;
+      background: $btn-color;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -ms-border-radius: 100px;
+      -o-border-radius: 100px;
+      span {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: $white-color;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: $white-color;
+      }
+    }
+    .future-tab {
+      justify-content: space-between;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      width: 35%;
+      p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 30px;
+        color: $text-color;
+      }
+      .tabs {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .tab {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 30px;
+          color: $text-color;
+          max-width: 242px;
+          svg {
+            flex: none;
+          }
+          &.active {
+            color: $white-color;
+          }
+        }
+      }
+    }
+    .slider {
+      align-self: flex-end;
+      width: 20%;
+      .swiper-pagination {
+        display: none;
+      }
+      .swiper-button-prev {
+        left: 30%;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        width: 64px !important;
+        height: 64px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 80%;
+        &::after {
+          width: 64px !important;
+          height: 64px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #b573ab;
+          font-size: 20px;
+          border-radius: 50%;
+          border: 2px solid #b573ab;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+      }
+      .swiper-slide {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 200px;
+        h3 {
+          font-family: $rubik-font !important;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0%;
+          text-align: right;
+          color: $white-color;
+        }
+        p {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 30px;
+          letter-spacing: 0%;
+          text-align: right;
+          color: $text-color;
+        }
+      }
+    }
+    .data-ana {
+      display: flex;
+      width: 25%;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      border: 1px solid #ffffff38;
+      padding: 20px;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 100%
+      );
+      backdrop-filter: blur(60px);
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+      h3 {
+        font-family: $rubik-font !important;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 0%;
+        color: $white-color;
+      }
+      p {
+        color: $text-color;
+      }
+      a {
+        color: $white-color;
+      }
+      img {
+        height: 150px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+      }
+    }
+    .pages {
+      width: 20%;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: space-between;
+      .tab-btn {
+        margin-left: auto;
+      }
+      .our-page {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        .box {
+          h2 {
+            font-family: $rubik-font !important;
+            color: $white-color;
+          }
+          p {
+            color: $text-color;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 0%;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .future {
+    .future-wrapper {
+      flex-wrap: wrap;
+      .future-tab,
+      .slider,
+      .data-ana,
+      .pages {
+        width: calc(50% - 20px);
+      }
+      .slider {
+        .swiper-button-prev {
+          left: auto;
+          right: 100px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .future {
+    .future-wrapper {
+      flex-wrap: wrap;
+      gap: 30px;
+      .future-tab,
+      .slider,
+      .data-ana,
+      .pages {
+        width: 100%;
+      }
+      .slider {
+        .swiper-button-prev {
+          left: auto;
+          right: 100px;
+        }
+      }
+      .future-tab {
+        gap: 30px;
+      }
+    }
+  }
+}
